@@ -1,0 +1,12 @@
+:root {
+  --color-surface-default: #ffffff;
+  --color-primary: #1a1a1a;
+  --color-secondary: #666666;
+  --color-neutral-muted: #E0E0E0;
+  --color-accent: #2563EB;
+  --color-danger: #DC2626;
+  --color-surface-subtle: #F5F5F5;
+  --color-accent-active: #1E4FDB;
+  --color-primary-hover: #2D2D2D;
+  --color-primary-active: #0D0D0D;
+}

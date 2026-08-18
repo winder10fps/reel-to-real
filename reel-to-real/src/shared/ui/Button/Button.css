@@ -1,0 +1,37 @@
+button {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-surface-default);
+  background-color: var(--color-accent);
+}
+
+.not-filled {
+  color: var(--color-accent);
+  background-color: var(--color-surface-default);
+}
+
+button:hover {
+  opacity: .9;
+}
+
+.default {
+  padding: 20px 40px;
+}
+
+.small {
+  padding: 12px 24px;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: .8;
+}
+
+button.disabled:hover{
+  opacity: .8;
+}
+
+.stretched {
+  width: 100%;
+}
