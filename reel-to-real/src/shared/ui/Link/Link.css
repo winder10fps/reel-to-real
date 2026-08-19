@@ -1,0 +1,23 @@
+.link {
+  font-size: 16px;
+}
+
+.link.primary {
+  color: var(--color-primary);
+}
+
+.link.secondary {
+  color: var(--color-secondary);
+}
+
+.link.surface-default {
+  color: var(--color-surface-default)
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.link:hover {
+  opacity: .8;
+}

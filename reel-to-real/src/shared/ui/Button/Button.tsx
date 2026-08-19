@@ -7,6 +7,7 @@ type ButtonProps = {
   type?: 'button' | 'submit',
   disabled?: boolean,
   stretched?: boolean,
+  forHeader?: boolean,
   onClick?: () => void,
 }
 
@@ -17,14 +18,17 @@ const Button = ({
   type = 'button',
   disabled = false,
   stretched = false,
+  forHeader = false,
   onClick,
 }: ButtonProps) => {
 
   const classNames = [
+    'button',
     size,
     notFilled && 'not-filled',
     disabled && 'disabled',
-    stretched && 'stretched'
+    stretched && 'stretched',
+    forHeader && 'for-header'
   ].filter(Boolean).join(' ')
 
   return (

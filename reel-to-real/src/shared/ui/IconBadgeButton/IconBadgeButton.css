@@ -1,0 +1,24 @@
+.icon-badge-button {
+  display: inline-flex;
+  gap: 4px;
+  transition: all var(--transition-medium);
+}
+
+.icon-badge-button:hover {
+  opacity: .8;
+}
+
+.icon-badge-button .badge {
+  align-self: flex-start;
+  color: var(--color-surface-default);
+  font-size: 12px;
+  width: 14px;
+  height: 14px;
+}
+
+.icon-badge-button .badge.accent {
+  background-color: var(--color-accent);
+}
+.icon-badge-button .badge.primary {
+  background-color: var(--color-primary);
+}

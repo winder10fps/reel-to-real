@@ -1,15 +1,17 @@
 import './styles/reset.css'
 import './styles/variables.css'
 import './styles/globals.css'
-import Button from "../shared/ui/Button/Button"
+import { AuthProvider } from '../entities/user/model/user.context'
+import Header from '../widgets/header/Header'
+import AppContainer from '../shared/ui/AppContainer/AppContainer'
 
 function App() {
   return (
-    <>
-      <Button onClick={() => console.log('d')}>
-        <img src="/" alt="" />
-      </Button>
-    </>
+    <AuthProvider>
+      <AppContainer>
+        <Header />
+      </AppContainer>
+    </AuthProvider>
   )
 }
 

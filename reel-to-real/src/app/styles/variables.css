@@ -9,4 +9,6 @@
   --color-accent-active: #1E4FDB;
   --color-primary-hover: #2D2D2D;
   --color-primary-active: #0D0D0D;
+
+  --transition-medium: .5s
 }
