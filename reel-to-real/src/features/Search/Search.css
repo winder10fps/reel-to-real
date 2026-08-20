@@ -1,0 +1,20 @@
+.search {
+  padding: 18px 24px;
+  width: 100%;
+  max-width: 632px;
+  display: flex;
+}
+
+.search input {
+  font-size: 16px;
+  margin-left: 8px;
+  width: 100%;
+}
+
+.search img {
+  opacity: .5
+}
+
+.search:focus-within img {
+  opacity: 1;
+}
