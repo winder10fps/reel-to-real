@@ -1,0 +1,46 @@
+.hero-section {
+  display: flex;
+  height: 640px;
+}
+
+.hero-section__image {
+  width: 50%;
+  height: 100%;
+}
+
+.hero-section__right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: var(--color-accent);
+  padding: 0 40px;
+  width: 50%;
+}
+
+.hero-section__heading {
+  font-family: "Bebas Neue Cyrillic", sans-serif;
+  font-size: 72px;
+  line-height: 120%;
+  color: var(--color-surface-default);
+  max-width: 478px;
+}
+
+.hero-section__text {
+  font-size: 20px;
+  color: var(--color-surface-default);
+  line-height: 140%;
+  margin: 16px 0 28px 0;
+  max-width: 536px;
+}
+
+.hero-section__decor{
+  position: absolute;
+  display: inline-block;
+  width: 512px;
+  height: 512px;
+  top: 45px;
+  left: 68%;
+  mix-blend-mode: hard-light;
+}

@@ -1,0 +1,28 @@
+.running-line__container {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.running-line__track {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.running-line__text {
+  font-family: 'Bebas Neue Cyrillic', sans-serif;
+  color: var(--color-accent);
+  font-size: 24px;
+  letter-spacing: 20%;
+  line-height: 120%;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-20%);
+  }
+}

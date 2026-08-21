@@ -2,6 +2,7 @@ import './Button.css'
 
 type ButtonProps = {
   children: React.ReactNode,
+  className?: string,
   size?: 'default' | 'small',
   notFilled?: boolean,
   type?: 'button' | 'submit',
@@ -13,6 +14,7 @@ type ButtonProps = {
 
 const Button = ({
   children,
+  className,
   size = 'default',
   notFilled = false,
   type = 'button',
@@ -24,6 +26,7 @@ const Button = ({
 
   const classNames = [
     'button',
+    className,
     size,
     notFilled && 'not-filled',
     disabled && 'disabled',

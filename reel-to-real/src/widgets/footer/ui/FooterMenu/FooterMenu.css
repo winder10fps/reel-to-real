@@ -1,0 +1,23 @@
+.footer-menu {
+
+}
+
+.footer-menu__heading {
+  font-family: 'Bebas Neue Cyrillic', sans-serif;
+  font-size: 32px;
+  line-height: 120%;
+  margin-bottom: 32px;
+  color: var(--color-surface-default);
+}
+
+.footer-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.footer-menu__link {
+  line-height: 140%;
+  text-transform: capitalize;
+}
