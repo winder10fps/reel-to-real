@@ -2,18 +2,12 @@ import './styles/reset.css'
 import './styles/variables.css'
 import './styles/globals.css'
 import { AuthProvider } from '../entities/user/model/user.context'
-import Header from '../widgets/header/Header'
-import Hero from '../widgets/Hero/Hero'
-import Footer from '../widgets/footer/Footer'
-import RunningLine from '../widgets/RunningLine/RunningLine'
+import { AppRouter } from './router'
 
 function App() {
   return (
     <AuthProvider>
-      <Header />
-      <Hero />
-      <RunningLine />
-      <Footer />
+      <AppRouter />
     </AuthProvider>
   )
 }

@@ -1,5 +1,6 @@
 import HeaderTop from './HeaderTop/HeaderTop'
 import HeaderBottom from './HeaderBottom/HeaderBottom'
+import './Header.css'
 
 const Header = () => {
   return (
