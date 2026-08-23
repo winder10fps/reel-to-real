@@ -4,6 +4,7 @@
   text-transform: uppercase;
   color: var(--color-surface-default);
   background-color: var(--color-accent);
+  line-height: 122%;
 }
 
 .not-filled {

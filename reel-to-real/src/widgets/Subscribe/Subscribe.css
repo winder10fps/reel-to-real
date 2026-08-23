@@ -1,0 +1,33 @@
+.subscribe {
+  background-color: var(--color-surface-default);
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.subscribe__heading {
+  font-family: 'Bebas Neue Cyrillic', sans-serif;
+  font-size: 80px;
+  line-height: 120%;
+}
+
+.subscribe__text {
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--color-secondary);
+  max-width: 462px;
+  margin: 12px 0 40px 0;
+}
+
+.subscribe form {
+  display: flex;
+  width: 100%;
+  max-width: 723px;
+  gap: 16px;
+}
+
+.subscribe form input {
+  width: 100%;
+}
