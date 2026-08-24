@@ -1,0 +1,26 @@
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 183px 0;
+  gap: 40px;
+}
+
+.not-found__number {
+  font-family: var(--second-family);
+  font-size: 300px;
+  line-height: 120%;
+  color: var(--color-accent)
+}
+
+.not-found__top-text {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 120%;
+}
+
+.not-found__bottom-text {
+  max-width: 308px;
+  line-height: 120%;
+  margin-top: 16px;
+}

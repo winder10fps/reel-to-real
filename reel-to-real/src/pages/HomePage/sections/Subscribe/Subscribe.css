@@ -8,7 +8,7 @@
 }
 
 .subscribe__heading {
-  font-family: 'Bebas Neue Cyrillic', sans-serif;
+  font-family: var(--second-family);
   font-size: 80px;
   line-height: 120%;
 }

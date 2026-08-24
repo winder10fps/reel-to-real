@@ -8,3 +8,10 @@
 .layout-content {
   flex: 1
 }
+
+.page-heading {
+  font-family: var(--second-family);
+  font-size: 100px;
+  line-height: 120%;
+  text-transform: uppercase;
+}

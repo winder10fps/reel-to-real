@@ -1,0 +1,49 @@
+.shop-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px;
+  border-bottom: var(--border-neutral-muted);
+}
+
+.shop-card__link {
+  font-size: 20px;
+}
+
+.shop-card__metro {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shop-card__metro-round {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.shop-card__metro-round.purple {
+  background-color: #8e479b;
+}
+
+.shop-card__metro-round.orange {
+  background-color: #ea6a00;
+}
+
+.shop-card__metro-round.red {
+  background-color: #e90101;
+}
+
+.shop-card__metro-line {
+  line-height: 140%;
+}
+
+.shop-card__address {
+  line-height: 140%;
+  color: var(--color-secondary);
+}
+
+.shop-card__working-hours {
+  line-height: 140%;
+}
+

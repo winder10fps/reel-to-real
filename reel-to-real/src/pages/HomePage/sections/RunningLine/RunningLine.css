@@ -10,7 +10,7 @@
 }
 
 .running-line__text {
-  font-family: 'Bebas Neue Cyrillic', sans-serif;
+  font-family: var(--second-family);
   color: var(--color-accent);
   font-size: 24px;
   letter-spacing: 20%;

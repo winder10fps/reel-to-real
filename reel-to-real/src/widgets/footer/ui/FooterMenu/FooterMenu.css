@@ -3,7 +3,7 @@
 }
 
 .footer-menu__heading {
-  font-family: 'Bebas Neue Cyrillic', sans-serif;
+  font-family: var(--second-family);
   font-size: 32px;
   line-height: 120%;
   margin-bottom: 32px;

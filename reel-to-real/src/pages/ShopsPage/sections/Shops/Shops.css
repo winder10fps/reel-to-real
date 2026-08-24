@@ -1,0 +1,12 @@
+.shops {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shops-left {
+  width: 100%;
+}
+
+.shops-map {
+  max-width: 57%;
+}

@@ -1,5 +1,6 @@
 .link {
   font-size: 16px;
+  line-height: 140%;
 }
 
 .link.primary {
@@ -16,6 +17,14 @@
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.link.accent {
+  color: var(--color-accent);
 }
 
 .link:hover {

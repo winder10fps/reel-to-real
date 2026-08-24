@@ -5,14 +5,14 @@
 }
 
 .select.have-borders {
-  border-left: 1px solid var(--color-neutral-muted);
-  border-right: 1px solid var(--color-neutral-muted);
+  border-left: var(--border-neutral-muted);
+  border-right: var(--border-neutral-muted);
 }
 
 .select-list {
   position: absolute;
   width: calc(100% + 2px);
-  border: 1px solid var(--color-neutral-muted);
+  border: var(--border-neutral-muted);
   border-top: none;
   left: -1px;
 }
@@ -26,7 +26,7 @@
 .select-list__link {
   display: block;
   padding: 20px 24px;
-  border-top: 1px solid var(--color-neutral-muted);
+  border-top: var(--border-neutral-muted);
   line-height: 120%;
   background-color: var(--color-surface-default);
 }

@@ -2,7 +2,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "../../pages/HomePage/HomePage";
 import ContactsPage from "../../pages/ContactsPage/ContactsPage";
 import type React from "react";
-import Layout from "../../pages/layout/Layout";
+
+import NotFound from "../../pages/NotFoundPage/NotFound";
+import ShopsPage from "../../pages/ShopsPage/ShopsPage";
+import Layout from "../../widgets/layout/Layout";
 
 const router = createBrowserRouter([
   {
@@ -18,9 +21,12 @@ const router = createBrowserRouter([
         element: <ContactsPage />
       },
       {
+        path: '/shops',
+        element: <ShopsPage />
+      },
+      {
         path: '*',
-        // 404 страницу вставить
-        element: <div>404</div>
+        element: <NotFound />
       }
     ]
   }

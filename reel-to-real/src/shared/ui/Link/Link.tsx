@@ -3,27 +3,33 @@ import './Link.css'
 
 type Props = {
   href: string,
-  color: 'primary' | 'secondary' | 'surface-default',
+  color: 'primary' | 'secondary' | 'surface-default' | 'accent',
   uppercase?: boolean,
+  underline?: boolean
   className?: string,
+  target?: '_self' | '_blank',
   children: React.ReactNode
 }
 
 const Link = ({
   href,
   color,
-  uppercase = false,
+  uppercase,
+  underline,
+  target = '_self',
   className,
   children
 }: Props) => {
   return (
     <a
       href={href}
+      target={target}
       className={[
         'link',
         className,
         color,
-        uppercase && 'uppercase'
+        uppercase && 'uppercase',
+        underline && 'underline'
       ].filter(Boolean).join(' ')}
     >
       {children}

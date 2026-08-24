@@ -1,6 +1,7 @@
+import { formatWithEnding } from '../../../../../../shared/lib/format/formatWithEnding'
+import Link from '../../../../../../shared/ui/Link/Link'
 import './MainCategory.css'
-import { formatWithEnding } from '../../../../shared/lib/format/formatWithEnding'
-import Link from '../../../../shared/ui/Link/Link'
+
 
 type Props = {
   heading: string,

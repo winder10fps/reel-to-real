@@ -20,7 +20,7 @@ const HeaderTop = () => {
     <div className='header-top'>
       <div className='header-top__store'>
         <Logo color='primary' style={{ marginRight: '8px' }} />
-        <Link href='/stores' color='secondary' uppercase>магазины</Link>
+        <Link href='/shops' color='secondary' uppercase>магазины</Link>
         <Link href='/contacts' color='secondary' uppercase>контакты</Link>
       </div>
 

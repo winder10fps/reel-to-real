@@ -11,5 +11,9 @@
   --color-primary-active: #0D0D0D;
 
   --transition-medium: .5s;
-  --transition-fast: .3s
+  --transition-fast: .3s;
+
+  --second-family: 'Bebas Neue Cyrillic', sans-serif;
+
+  --border-neutral-muted: 1px solid var(--color-neutral-muted);
 }

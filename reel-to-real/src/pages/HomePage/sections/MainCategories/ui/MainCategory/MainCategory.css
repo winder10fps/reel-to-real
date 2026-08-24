@@ -16,6 +16,6 @@
 
 .main-categories__heading {
   font-size: 24px;
-  font-family: 'Bebas Neue Cyrillic', sans-serif;
+  font-family: var(--second-family);
   margin: 12px 0 8px 0;
 }

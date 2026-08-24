@@ -1,7 +1,7 @@
-import Hero from '../../widgets/Hero/Hero'
-import RunningLine from '../../widgets/RunningLine/RunningLine'
-import MainCategories from '../../widgets/MainCategories/MainCategories'
-import Subscribe from '../../widgets/Subscribe/Subscribe'
+import Hero from './sections/Hero/Hero'
+import MainCategories from './sections/MainCategories/MainCategories'
+import RunningLine from './sections/RunningLine/RunningLine'
+import Subscribe from './sections/Subscribe/Subscribe'
 
 const HomePage = () => {
   return (

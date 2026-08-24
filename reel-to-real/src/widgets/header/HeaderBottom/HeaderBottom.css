@@ -1,8 +1,8 @@
 .header-bottom{
   width: 100%;
   left: 0;
-  border-top: 1px solid var(--color-neutral-muted);
-  border-bottom: 1px solid var(--color-neutral-muted);
+  border-top: var(--border-neutral-muted);
+  border-bottom: var(--border-neutral-muted);
   display: flex;
   align-items: center;
 }
