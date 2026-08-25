@@ -5,5 +5,9 @@ export type Shop = {
     color: 'purple' | 'orange' | 'red',
     line: string
   },
-  workingHours: string
+  workingHours: {
+    from: string,
+    to: string,
+    days: string
+  }
 }

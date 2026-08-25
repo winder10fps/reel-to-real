@@ -15,6 +15,7 @@
   border: var(--border-neutral-muted);
   border-top: none;
   left: -1px;
+  z-index: 1000;
 }
 
 .select-header {

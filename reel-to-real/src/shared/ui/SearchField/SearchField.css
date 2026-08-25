@@ -1,0 +1,36 @@
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search.big {
+  padding: 18px 24px;
+  width: 100%;
+  max-width: 632px;
+}
+
+.search.small {
+  padding: 16px;
+  max-width: 274px;
+  border: var(--border-neutral-muted);
+}
+
+.search-input {
+  font-size: 16px;
+  margin-left: 8px;
+  width: 100%;
+  background-color: transparent;
+}
+
+.search.small img {
+  width: 16px;
+  height: 16px;
+}
+
+.search img {
+  opacity: .5
+}
+
+.search:focus-within img {
+  opacity: 1;
+}

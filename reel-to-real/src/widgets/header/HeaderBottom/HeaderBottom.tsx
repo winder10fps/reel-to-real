@@ -1,9 +1,20 @@
-import Search from '../../../features/Search/Search'
+import { useState } from 'react'
 import Link from '../../../shared/ui/Link/Link'
+import SearchField from '../../../shared/ui/SearchField/SearchField'
 import Select from '../../../shared/ui/Select/Select'
 import './HeaderBottom.css'
+import { useNavigate } from 'react-router-dom'
 
 const HeaderBottom = () => {
+  const [query, setQuery] = useState('')
+
+  const navigate = useNavigate()
+
+  const isSearchPage = location.pathname === '/search'
+  const handleFocus = () => {
+    if (!isSearchPage)
+      navigate('/search')
+  }
 
   return (
     <div className='header-bottom'>
@@ -36,7 +47,13 @@ const HeaderBottom = () => {
         ]}
         haveBorders
       />
-      <Search />
+      <SearchField
+        placeholder='Найти винил или аппаратуру'
+        value={query}
+        size='big'
+        onChange={setQuery}
+        onFocus={handleFocus}
+      />
       <Link
         href="tel:8-800-456-78-90"
         className='header-bottom__phone'

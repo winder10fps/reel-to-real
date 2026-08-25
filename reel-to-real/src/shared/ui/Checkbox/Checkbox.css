@@ -18,7 +18,7 @@
 }
 
 .checkbox:hover .custom-checkbox {
-  border-color: var(--color-primary);
+  border-color: var(--color-secondary);
 }
 
 .custom-checkbox {

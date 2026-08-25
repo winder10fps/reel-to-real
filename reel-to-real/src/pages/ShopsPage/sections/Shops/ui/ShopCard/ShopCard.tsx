@@ -22,7 +22,9 @@ const ShopCard = ({ shop }: Props) => {
         <span className="shop-card__metro-line">{shop.metro.line}</span>
       </div>
       <span className="shop-card__address">{shop.address}</span>
-      <span className="shop-card__working-hours">{shop.workingHours}</span>
+      <span className="shop-card__working-hours">
+        {`${shop.workingHours.days} с ${shop.workingHours.from} до ${shop.workingHours.to}`}
+      </span>
     </div>
   )
 }

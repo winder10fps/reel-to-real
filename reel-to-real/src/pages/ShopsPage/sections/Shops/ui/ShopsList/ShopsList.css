@@ -1,0 +1,20 @@
+.shops-list {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.shops-list__left {
+  width: 100%;
+}
+
+.shops-map {
+  max-width: 57%;
+  height: 504px;
+}
+
+.shops-not-found {
+  padding: 24px;
+  font-size: 20px;
+  color: var(--color-secondary);
+}
