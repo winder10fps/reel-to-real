@@ -8,7 +8,7 @@ type Props = {
 
 }
 
-const Checkbox = ({
+export const Checkbox = ({
   label,
   checked,
   onChange,
@@ -41,5 +41,3 @@ const Checkbox = ({
     </label>
   )
 }
-
-export default Checkbox

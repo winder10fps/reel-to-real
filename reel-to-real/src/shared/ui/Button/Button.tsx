@@ -12,7 +12,7 @@ type ButtonProps = {
   onClick?: () => void,
 }
 
-const Button = ({
+export const Button = ({
   children,
   className,
   size = 'default',
@@ -43,6 +43,3 @@ const Button = ({
     </button>
   )
 }
-
-
-export default Button

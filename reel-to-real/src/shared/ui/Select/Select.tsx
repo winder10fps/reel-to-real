@@ -13,7 +13,12 @@ type Props = {
   haveBorders?: boolean
 }
 
-const Select = ({ title, options, iconPath, haveBorders }: Props) => {
+export const Select = ({
+  title,
+  options,
+  iconPath,
+  haveBorders
+}: Props) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -53,5 +58,3 @@ const Select = ({ title, options, iconPath, haveBorders }: Props) => {
     </div>
   )
 }
-
-export default Select

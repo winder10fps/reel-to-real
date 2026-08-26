@@ -8,7 +8,7 @@ type Props = {
   onClick?: () => void
 }
 
-const IconBadgeButton = ({
+export const IconBadgeButton = ({
   children,
   figure,
   badgeBackgroundColor,
@@ -29,5 +29,3 @@ const IconBadgeButton = ({
     </button>
   )
 }
-
-export default IconBadgeButton

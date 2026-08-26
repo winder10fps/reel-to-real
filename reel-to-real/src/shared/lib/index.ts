@@ -1,0 +1,1 @@
+export { formatWithEnding } from './format/formatWithEnding'

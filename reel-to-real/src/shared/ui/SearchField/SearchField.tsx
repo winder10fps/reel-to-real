@@ -8,7 +8,7 @@ type Props = {
   onFocus?: () => void
 }
 
-const SearchField = ({
+export const SearchField = ({
   value,
   placeholder,
   size,
@@ -28,5 +28,3 @@ const SearchField = ({
     </div>
   )
 }
-
-export default SearchField

@@ -5,7 +5,7 @@ type Props = {
   style?: React.CSSProperties
 }
 
-const Logo = ({ color, style }: Props) => {
+export const Logo = ({ color, style }: Props) => {
   return (
     <a
       href="/"
@@ -16,5 +16,3 @@ const Logo = ({ color, style }: Props) => {
     </a>
   )
 }
-
-export default Logo

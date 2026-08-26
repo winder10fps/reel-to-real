@@ -11,7 +11,7 @@ type Props = {
   children: React.ReactNode
 }
 
-const Link = ({
+export const Link = ({
   href,
   color,
   uppercase,
@@ -36,5 +36,3 @@ const Link = ({
     </a>
   )
 }
-
-export default Link

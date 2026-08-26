@@ -7,10 +7,10 @@ type Props = {
   errored?: boolean,
   disabled?: boolean
   value?: string
-  onChange?: () => void,
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void,
 }
 
-const Input = ({
+export const Input = ({
   placeholder,
   type = 'text',
   className,
@@ -34,5 +34,3 @@ const Input = ({
     />
   )
 }
-
-export default Input

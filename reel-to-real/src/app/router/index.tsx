@@ -1,11 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomePage from "../../pages/HomePage/HomePage";
-import ContactsPage from "../../pages/ContactsPage/ContactsPage";
 import type React from "react";
 
-import NotFound from "../../pages/NotFoundPage/NotFound";
-import ShopsPage from "../../pages/ShopsPage/ShopsPage";
-import Layout from "../../widgets/layout/Layout";
+import { HomePage } from "@/pages/home";
+import { ContactsPage } from "@/pages/contacts";
+import { NotFoundPage } from "@/pages/not-found";
+import { Layout } from "@/app/layout";
+import { ShopsPage } from "@/pages/shops";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: '*',
-        element: <NotFound />
+        element: <NotFoundPage />
       }
     ]
   }
