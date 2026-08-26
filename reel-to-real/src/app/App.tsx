@@ -1,7 +1,7 @@
 import './styles/reset.css'
 import './styles/variables.css'
 import './styles/globals.css'
-import { AuthProvider } from '../entities/user/model/user.context'
+import { AuthProvider } from '@/entities/user'
 import { AppRouter } from './router'
 
 function App() {

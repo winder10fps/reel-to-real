@@ -1,5 +1,5 @@
 import './HeaderTop.css'
-import { useAuth } from '../../../entities/user/model/user.context'
+import { useAuth } from '@/entities/user'
 import Button from '../../../shared/ui/Button/Button'
 import IconBadgeButton from '../../../shared/ui/IconBadgeButton/IconBadgeButton'
 import Link from '../../../shared/ui/Link/Link'

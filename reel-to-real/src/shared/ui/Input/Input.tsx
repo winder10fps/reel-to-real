@@ -7,7 +7,7 @@ type Props = {
   errored?: boolean,
   disabled?: boolean
   value?: string
-  onChange?: (e: any) => void,
+  onChange?: () => void,
 }
 
 const Input = ({

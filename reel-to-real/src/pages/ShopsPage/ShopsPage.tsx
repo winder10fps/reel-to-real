@@ -1,4 +1,4 @@
-import type { Shop } from '../../entities/shop/model/shop'
+import type { Shop } from '@/entities/shop'
 import ShopsList from './sections/Shops/ui/ShopsList/ShopsList'
 import './ShopsPage.css'
 import { useShopFilters } from './sections/Shops/ui/ShopFilters/useShopFilters'

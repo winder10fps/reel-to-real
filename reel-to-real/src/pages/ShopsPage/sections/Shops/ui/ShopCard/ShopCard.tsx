@@ -1,4 +1,4 @@
-import type { Shop } from '../../../../../../entities/shop/model/shop'
+import type { Shop } from '@/entities/shop'
 import Link from '../../../../../../shared/ui/Link/Link'
 import './ShopCard.css'
 

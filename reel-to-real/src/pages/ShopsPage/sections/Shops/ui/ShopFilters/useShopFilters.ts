@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react"
-import type { Shop } from "../../../../../../entities/shop/model/shop"
+import type { Shop } from "@/entities/shop"
 
 const isShopOpen = (workingHours: Shop['workingHours']) => {
   const now = new Date()
