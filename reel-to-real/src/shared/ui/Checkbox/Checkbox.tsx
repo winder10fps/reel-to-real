@@ -5,14 +5,15 @@ type Props = {
   checked: boolean,
   onChange: () => void,
   errored?: boolean,
-
+  children?: React.ReactNode
 }
 
 export const Checkbox = ({
   label,
   checked,
   onChange,
-  errored
+  errored,
+  children
 }: Props) => {
   const id = crypto.randomUUID()
 
@@ -36,7 +37,7 @@ export const Checkbox = ({
         <img src="/icons/check.svg" className='checkmark-icon'/>
       </span>
 
-      <span className='checkbox-label'>{label}</span>
+      <span className='checkbox-label'>{label}{children}</span>
       
     </label>
   )

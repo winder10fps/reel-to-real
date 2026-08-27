@@ -1,0 +1,31 @@
+.company-contacts {
+  display: flex;
+  gap: 10.5%;
+  margin-top: 32px;
+}
+
+.company-contacts__column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 250px;
+}
+
+.company-contacts .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.company-contacts .contact-heading {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--color-secondary);
+}
+
+.company-contacts .contact-content {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+}

@@ -1,0 +1,17 @@
+.textarea {
+  border: var(--border-neutral-muted-bold);
+  font-size: 16px;
+  line-height: 120%;
+  padding: 16px;
+  resize: none;
+  field-sizing: content;
+  min-height: 120px;
+}
+
+.textarea.errored {
+  border-color: var(--color-danger);
+}
+
+.textarea:focus {
+  border-color: var(--color-primary-active);
+}

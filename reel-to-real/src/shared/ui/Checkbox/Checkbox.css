@@ -22,8 +22,8 @@
 }
 
 .custom-checkbox {
-  width: 20px;
-  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
   border: var(--border-neutral-muted);
   display: flex;
   align-items: center;
@@ -32,9 +32,18 @@
   background-color: var(--color-surface-default);
 }
 
+.checkbox.errored .custom-checkbox {
+  border-color: var(--color-danger);
+}
+
+.checkbox.errored .checkbox-label {
+  color: var(--color-danger)
+}
+
 .checkmark-icon {
   display: none;
   user-select: none;
+  position: absolute;
 }
 
 input:checked+.custom-checkbox {
