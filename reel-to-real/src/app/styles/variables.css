@@ -17,4 +17,5 @@
 
   --border-neutral-muted: 1px solid var(--color-neutral-muted);
   --border-neutral-muted-bold: 2px solid var(--color-neutral-muted);
+  --border-accent-bold: 2px solid var(--color-accent);
 }

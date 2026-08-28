@@ -1,0 +1,28 @@
+.cookie-bunner {
+  max-width: 400px;
+  padding: 24px;
+  border-radius: 4px;
+  height: 252px;
+  box-shadow: 4px 4px 20px 0 #ebe0e040;
+  background: var(--color-surface-default);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+}
+
+.cookie-bunner__heading {
+  font-family: var(--second-family);
+  font-size: 32px;
+  line-height: 120%;
+}
+
+.cookie-bunner__text {
+  line-height: 140%;
+  margin: 8px 0 16px 0;
+}
+
+.cookie-bunner__button {
+  border: var(--border-accent-bold)
+}

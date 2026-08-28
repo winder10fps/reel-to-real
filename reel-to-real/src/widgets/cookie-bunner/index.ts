@@ -1,0 +1,1 @@
+export { CookieBunner } from './ui/CookieBunner'
