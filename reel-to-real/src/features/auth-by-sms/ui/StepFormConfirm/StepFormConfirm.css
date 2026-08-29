@@ -1,0 +1,18 @@
+.confirm-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.confirm-form input {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.confirm-form__timer {
+  font-size: 12px;
+  line-height: 140%;
+  color: var(--color-secondary);
+}

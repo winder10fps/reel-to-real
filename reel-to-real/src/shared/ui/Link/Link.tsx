@@ -1,5 +1,6 @@
 import React from 'react'
 import './Link.css'
+import { Link as RouterLink } from 'react-router-dom'
 
 type Props = {
   href: string,
@@ -21,8 +22,8 @@ export const Link = ({
   children
 }: Props) => {
   return (
-    <a
-      href={href}
+    <RouterLink
+      to={href}
       target={target}
       className={[
         'link',
@@ -33,6 +34,6 @@ export const Link = ({
       ].filter(Boolean).join(' ')}
     >
       {children}
-    </a>
+    </RouterLink>
   )
 }

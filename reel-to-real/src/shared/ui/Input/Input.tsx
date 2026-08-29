@@ -1,3 +1,4 @@
+import { forwardRef } from 'react'
 import './Input.css'
 
 type Props = {
@@ -6,21 +7,24 @@ type Props = {
   className?: string,
   errored?: boolean,
   disabled?: boolean
-  value?: string
+  value?: string,
+  maxLength?: number,
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void,
 }
 
-export const Input = ({
+export const Input = forwardRef<HTMLInputElement, Props>(({
   placeholder,
   type = 'text',
   className,
   errored,
   disabled,
   value,
+  maxLength,
   onChange
-}: Props) => {
+}, ref) => {
   return (
     <input
+      ref={ref}
       placeholder={placeholder}
       type={type}
       className={[
@@ -30,7 +34,8 @@ export const Input = ({
       ].filter(Boolean).join(' ')}
       disabled={disabled}
       value={value}
+      maxLength={maxLength}
       onChange={onChange}
     />
   )
-}
+})

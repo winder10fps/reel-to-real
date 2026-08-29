@@ -8,22 +8,23 @@ type Props = {
 }
 
 export const AuthProvider = ({ children }: Props) => {
-  const [user, setUser] = useState<IUser | null>(null)
+  const [user, setUser] = useState<IUser | null>(() => {
+    const savedUser = localStorage.getItem('user')
+    return savedUser ? JSON.parse(savedUser) : null
+  })
 
   useEffect(() => {
-    // заглушка
-    const plugUser: IUser = {
-      id: 23,
-      name: 'ivan',
-      cart: [1,3],
-      favarite: [2],
+    if (user) {
+      localStorage.setItem('user', JSON.stringify(user))
     }
-    setUser(plugUser)
-    // конец заглушки
-  }, [])
+    else {
+      localStorage.removeItem('user')
+    }
+  }, [user])
 
   const value: IAuthContext = {
-    user
+    user,
+    setUser
   }
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

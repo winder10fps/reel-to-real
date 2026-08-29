@@ -2,6 +2,7 @@ import { Button, Checkbox, Input, Link, Textarea } from "@/shared/ui"
 import { useState } from "react"
 import './ContactsPage.css'
 import { CompanyContacts } from "@/entities/company"
+import { validatePhone } from "@/shared/lib"
 
 type Error = {
   name: boolean,
@@ -51,7 +52,7 @@ export const ContactsPage = () => {
       return
     }
 
-    if (!/^[78]\d{10}$/.test(phone)) {
+    if (!validatePhone(phone)) {
       currentErrors.phone = true
       currentErrors.errorMessage = 'Некорректный номер телефона'
       setError(currentErrors)

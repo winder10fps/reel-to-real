@@ -1,13 +1,17 @@
 import './HeaderTop.css'
 
 import { useAuth } from '@/entities/user'
+import { RegisterModal } from '@/features/auth-by-sms'
 import { Logo, Link, IconBadgeButton, Button } from '@/shared/ui'
+import { useState } from 'react'
 
 const HeaderTop = () => {
   const { user } = useAuth()
 
+  const [isLoginOpen, setIsLoginOpen] = useState(false)
+
   const loginButtonClick = () => {
-    alert('login clicked')
+    setIsLoginOpen(true)
   }
 
   const profileButtonCLick = () => {
@@ -49,6 +53,11 @@ const HeaderTop = () => {
               <img src="/icons/cart.svg" alt="🛒" />
             </Button>
             <Button forHeader onClick={loginButtonClick}>войти</Button>
+
+            <RegisterModal
+              isOpen={isLoginOpen}
+              onClose={() => setIsLoginOpen(false)}
+            />
           </>
         }
       </div>

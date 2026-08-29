@@ -1,10 +1,10 @@
 export interface IUser {
   id: number,
-  name: string,
   cart: number[],
   favarite: number[]
 }
 
 export interface IAuthContext {
-  user: IUser | null
+  user: IUser | null;
+  setUser: React.Dispatch<React.SetStateAction<IUser | null>>
 }

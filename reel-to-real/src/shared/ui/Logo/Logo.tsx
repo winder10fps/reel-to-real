@@ -1,3 +1,4 @@
+import { Link as RouterLink } from 'react-router-dom'
 import './Logo.css'
 
 type Props = {
@@ -7,12 +8,12 @@ type Props = {
 
 export const Logo = ({ color, style }: Props) => {
   return (
-    <a
-      href="/"
+    <RouterLink
+      to="/"
       className={['logo', color].join(' ')}
       style={style}
     >
       Reel to real
-    </a>
+    </RouterLink>
   )
 }

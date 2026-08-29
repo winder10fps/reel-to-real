@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Select.css'
+import { Link as RouterLink } from 'react-router-dom'
 
 export type Option = {
   title: string,
@@ -50,7 +51,12 @@ export const Select = ({
             return <li
               key={opt.title}
             >
-              <a href={opt.href} className='select-list__link'>{opt.title}</a>
+              <RouterLink
+                to={opt.href}
+                className='select-list__link'
+              >
+                {opt.title}
+              </RouterLink>
             </li>
           })}
         </ul>
