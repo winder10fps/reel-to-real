@@ -1,0 +1,23 @@
+.to-top {
+  position: fixed;
+  bottom: 44px;
+  right: 44px;
+  padding: 4px;
+  border-radius: 4px;
+  z-index: 2000;
+  box-shadow: 4px 4px 20px 0 rgba(235, 224, 224, 0.25);
+  background: var(--color-surface-default);
+  transition: all var(--transition-fast);
+}
+
+.to-top img {
+  transition: all var(--transition-fast);
+}
+
+.to-top:hover {
+  background-color: var(--color-accent);
+}
+
+.to-top:hover img {
+  filter: brightness(0) invert(1)
+}

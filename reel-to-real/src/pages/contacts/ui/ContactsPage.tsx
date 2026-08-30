@@ -77,6 +77,7 @@ export const ContactsPage = () => {
     setCompany('')
     setEmail('')
     setPhone('')
+    setMessage('')
     setIsAccept(false)
   }
 

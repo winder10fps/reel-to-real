@@ -3,6 +3,7 @@ import { Header } from '@/widgets/header'
 import { Footer } from '@/widgets/footer'
 import './Layout.css'
 import { CookieBunner } from '@/widgets/cookie-bunner'
+import { ToTop } from '@/widgets/to-top'
 
 export const Layout = () => {
   return (
@@ -14,6 +15,7 @@ export const Layout = () => {
       <Footer />
 
       <CookieBunner />
+      <ToTop />
     </div>
   )
 }
