@@ -1,0 +1,45 @@
+
+.cart-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.cart-table thead {
+  border: var(--border-neutral-muted)
+}
+
+.cart-table thead th {
+  padding: 24px 0;
+}
+
+.cart-table th {
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  text-align: left;
+}
+
+.col-image {
+  width: 17.71%;
+  padding-left: 24px !important;
+}
+
+.col-naming {
+  width: 41.15%;
+}
+
+.col-price {
+  width: 8.23%;
+}
+
+.col-quantity {
+  width: 8.23%;
+}
+
+.col-amount {
+  width: 23.44%;
+  text-align: right !important;
+  padding-right: 24px !important;
+}

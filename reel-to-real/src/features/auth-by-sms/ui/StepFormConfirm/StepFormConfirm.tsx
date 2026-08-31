@@ -21,7 +21,20 @@ const StepFormConfirm = ({ phone, onSuccess }: Props) => {
     if (currentCode === '1111') {
       setUser({
         id: 1,
-        cart: [],
+        cart: [
+          {
+            id: 1,
+            nameing: 'Neumann TLM 102 BK',
+            price: 91890,
+            quantity: 1,
+          },
+          {
+            id: 2,
+            nameing: 'Neumann TLM 102 BK',
+            price: 91890,
+            quantity: 1,
+          }
+        ],
         favarite: []
       })
       onSuccess()

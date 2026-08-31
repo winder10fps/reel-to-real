@@ -1,6 +1,8 @@
+import type { CartItem } from "@/entities/cart-item";
+
 export interface IUser {
   id: number,
-  cart: number[],
+  cart: CartItem[],
   favarite: number[]
 }
 
