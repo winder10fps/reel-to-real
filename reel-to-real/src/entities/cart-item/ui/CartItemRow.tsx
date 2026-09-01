@@ -30,7 +30,7 @@ export const CartItemRow = ({ item, onIncrease, onDecrease, onRemove }: Props) =
           >
             <img src="/icons/minus.svg" alt="-" />
           </button>
-          <span className="quantity-value">{item.quantity}</span>
+          <div className="quantity-value">{item.quantity}</div>
           <button
             className="quantity-button"
             onClick={() => onIncrease(item.id)}

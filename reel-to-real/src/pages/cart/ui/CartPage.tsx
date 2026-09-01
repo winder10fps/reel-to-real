@@ -1,9 +1,10 @@
 import { CartTable } from '@/widgets/cart-table'
-import React from 'react'
+import './CartPage.css'
 
 export const CartPage = () => {
   return (
-    <div>
+    <div className='cart-page'>
+      <h2 className='page-heading'>Корзина</h2>
       <CartTable />
     </div>
   )

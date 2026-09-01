@@ -1,6 +1,7 @@
 import { CartItemRow } from '@/entities/cart-item'
 import { useAuth } from '@/entities/user'
 import './CartTable.css'
+import { CheckoutButton } from '@/features/create-order'
 
 export const CartTable = () => {
   const { user, setUser } = useAuth()
@@ -24,6 +25,17 @@ export const CartTable = () => {
     if (!user) return
     const updatedCart = user.cart.filter(item => item.id !== id)
     setUser({ ...user, cart: updatedCart })
+  }
+
+  const countCartAmount = () => {
+    if (!userCart) return 0
+
+    let amount = 0
+    userCart.map((item) => (
+      amount += item.price * item.quantity
+    ))
+
+    return amount
   }
 
   return (
@@ -50,6 +62,12 @@ export const CartTable = () => {
           ))}
         </tbody>
       </table>
+      <div className="cart-table-widget__footer">
+        <CheckoutButton
+          cartAmount={countCartAmount()}
+          disabled={userCart?.length === 0}
+        />
+      </div>
     </div>
   )
 }

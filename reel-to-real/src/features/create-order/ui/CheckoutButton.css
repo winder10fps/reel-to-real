@@ -1,0 +1,23 @@
+.checkout-container {
+  position: relative;
+}
+
+.checkout__cart-amount {
+  position: absolute;
+  z-index: 10;
+  bottom: 18px;
+  right: 24px;
+}
+
+.checkout__cart-amount {
+  line-height: 140%;
+  color: var(--color-surface-default);
+}
+
+.checkout__cart-amount-bold {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: var(--color-surface-default);
+}
