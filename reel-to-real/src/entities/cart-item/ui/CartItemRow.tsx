@@ -1,5 +1,6 @@
 import type { CartItem } from '@/entities/cart-item'
 import './CartItemRow.css'
+import { Stepper } from '@/shared/ui'
 
 type Props = {
   item: CartItem,
@@ -22,22 +23,12 @@ export const CartItemRow = ({ item, onIncrease, onDecrease, onRemove }: Props) =
         {item.price} ₽
       </td>
       <td className='cart-item-row-quantity'>
-        <div className="quantity-controls">
-          <button
-            className="quantity-button"
-            onClick={() => onDecrease(item.id)}
-            disabled={item.quantity <= 1}
-          >
-            <img src="/icons/minus.svg" alt="-" />
-          </button>
-          <div className="quantity-value">{item.quantity}</div>
-          <button
-            className="quantity-button"
-            onClick={() => onIncrease(item.id)}
-          >
-            <img src="icons/plus.svg" alt="+" />
-          </button>
-        </div>
+        <Stepper
+          quantity={item.quantity}
+          size='default'
+          onIncrease={() => onIncrease(item.id)}
+          onDecrease={() => onDecrease(item.id)}
+        />
       </td>
       <td className='cart-item-row-amount'>
         <div className='cart-item-row-amount__wrapper'>

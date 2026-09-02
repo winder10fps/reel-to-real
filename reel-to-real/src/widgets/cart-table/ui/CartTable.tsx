@@ -6,7 +6,7 @@ import { CheckoutButton } from '@/features/create-order'
 export const CartTable = () => {
   const { user, setUser } = useAuth()
 
-  const userCart = user?.cart
+  const userCart = user?.cart || []
 
   const updateQuantity = (id: number, delta: number) => {
     if (!user) return
@@ -40,28 +40,34 @@ export const CartTable = () => {
 
   return (
     <div className='cart-table-widget'>
-      <table className='cart-table'>
-        <thead>
-          <tr>
-            <th className='col-image'>Фото</th>
-            <th className='col-naming'>Название</th>
-            <th className='col-price'>Цена</th>
-            <th className='col-quantity'>Кол-во</th>
-            <th className='col-amount'>Сумма</th>
-          </tr>
-        </thead>
-        <tbody>
-          {userCart?.map((item) => (
-            <CartItemRow
-              key={item.id}
-              item={item}
-              onIncrease={(id) => updateQuantity(id, 1)}
-              onDecrease={(id) => updateQuantity(id, -1)}
-              onRemove={handleRemoveItem}
-            />
-          ))}
-        </tbody>
-      </table>
+      {userCart.length > 0 ?
+        <table className='cart-table'>
+          <thead>
+            <tr>
+              <th className='col-image'>Фото</th>
+              <th className='col-naming'>Название</th>
+              <th className='col-price'>Цена</th>
+              <th className='col-quantity'>Кол-во</th>
+              <th className='col-amount'>Сумма</th>
+            </tr>
+          </thead>
+          <tbody>
+            {userCart?.map((item) => (
+              <CartItemRow
+                key={item.id}
+                item={item}
+                onIncrease={(id) => updateQuantity(id, 1)}
+                onDecrease={(id) => updateQuantity(id, -1)}
+                onRemove={handleRemoveItem}
+              />
+            ))}
+          </tbody>
+        </table>
+        :
+        <div className="cart-table-empty">
+          В корзине пусто. Начните добавлять товары.
+        </div>
+      }
       <div className="cart-table-widget__footer">
         <CheckoutButton
           cartAmount={countCartAmount()}

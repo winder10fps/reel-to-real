@@ -1,0 +1,48 @@
+.stepper {
+  background-color: var(--color-neutral-muted);
+  width: fit-content;
+  display: flex;
+}
+
+.stepper-button {
+  transition: opacity var(--transition-fast);
+  display: inline-flex;
+}
+
+.stepper-button:hover {
+  opacity: .6;
+}
+
+.stepper-value {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+}
+
+.stepper-default {
+  margin-top: -12px;
+}
+
+.stepper-button-default {
+  padding: 18px 17px;
+}
+
+.stepper-button-mini {
+  padding: 8px;
+}
+
+.stepper-button-mini img {
+  width: 12px;
+  height: 12px;
+}
+
+.stepper-value-default {
+  width: 34px;
+  font-size: 16px;
+}
+
+.stepper-value-mini {
+  width: 28px;
+  font-size: 12px;
+}
