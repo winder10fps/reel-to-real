@@ -1,12 +1,18 @@
 import './HeaderTop.css'
 
-import { useAuth } from '@/entities/user'
+import { useAuth, useCart } from '@/entities/user'
 import { RegisterModal } from '@/features/auth-by-sms'
 import { Logo, Link, IconBadgeButton, Button } from '@/shared/ui'
-import { useState } from 'react'
+import { useState, type ReactNode } from 'react'
 
-const HeaderTop = () => {
+type Props = {
+  miniCartSlot: ReactNode,
+  onToggleMiniCart: () => void
+}
+
+const HeaderTop = ({ miniCartSlot, onToggleMiniCart }: Props) => {
   const { user } = useAuth()
+  const { cartItemsCount } = useCart()
 
   const [isLoginOpen, setIsLoginOpen] = useState(false)
 
@@ -35,14 +41,17 @@ const HeaderTop = () => {
               <img src="icons/favorite.svg" alt="❤️" />
             </IconBadgeButton>
             <IconBadgeButton
-              figure={user?.cart.length}
-              badgeBackgroundColor='accent'>
+              figure={cartItemsCount}
+              badgeBackgroundColor='accent'
+              onClick={onToggleMiniCart}
+            >
               <img src="icons/cart.svg" alt="🛒" />
             </IconBadgeButton>
             <Button forHeader onClick={profileButtonCLick}>
               <img src="/icons/user.svg" alt="👤" />
               кабинет
             </Button>
+            {miniCartSlot}
           </>
           :
           <>

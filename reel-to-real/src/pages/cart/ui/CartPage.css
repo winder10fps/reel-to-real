@@ -1,3 +1,17 @@
+.cart-page {
+  position: relative;
+  min-height: calc(100vh - 450px);
+  display: flex;
+  flex-direction: column;
+}
+
 .cart-page h2 {
   margin: 60px 0 48px 24px;
+}
+
+.cart-page__ckeckout-button {
+  position: sticky;
+  bottom: 0;
+  z-index: 100;
+  margin-top: auto;
 }

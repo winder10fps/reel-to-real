@@ -33,6 +33,36 @@ const StepFormConfirm = ({ phone, onSuccess }: Props) => {
             nameing: 'Neumann TLM 102 BK',
             price: 91890,
             quantity: 1,
+          },
+          {
+            id: 3,
+            nameing: 'Neumann TLM 102 BK',
+            price: 91890,
+            quantity: 1,
+          },
+          {
+            id: 4,
+            nameing: 'Neumann TLM 102 BK',
+            price: 91890,
+            quantity: 1,
+          },
+          {
+            id: 5,
+            nameing: 'Neumann TLM 102 BK',
+            price: 91890,
+            quantity: 1,
+          },
+          {
+            id: 6,
+            nameing: 'Neumann TLM 102 BK',
+            price: 91890,
+            quantity: 1,
+          },
+          {
+            id: 7,
+            nameing: 'Neumann TLM 102 BK',
+            price: 91890,
+            quantity: 1,
           }
         ],
         favarite: []

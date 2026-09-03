@@ -4,16 +4,17 @@ import './CheckoutButton.css'
 
 type Props = {
   cartAmount: number,
-  disabled?: boolean
+  disabled?: boolean,
+  className?: string
 }
 
-export const CheckoutButton = ({ cartAmount, disabled }: Props) => {
+export const CheckoutButton = ({ cartAmount, disabled, className }: Props) => {
   const navigate = useNavigate()
   const handleCheckout = () => {
     navigate('/')
   }
   return (
-    <div className="checkout-container">
+    <div className={`checkout-container ${className}`}>
       <Button
         type='button'
         onClick={handleCheckout}
@@ -23,7 +24,7 @@ export const CheckoutButton = ({ cartAmount, disabled }: Props) => {
         Оформить заказ
       </Button>
       <div className="checkout__cart-amount">
-        Итого: 
+        Итого:
         <span className='checkout__cart-amount-bold'> {cartAmount} ₽</span>
       </div>
     </div>

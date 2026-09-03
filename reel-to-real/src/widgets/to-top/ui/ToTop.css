@@ -1,7 +1,7 @@
 .to-top {
   position: fixed;
-  bottom: 44px;
-  right: 44px;
+  bottom: 64px;
+  right: 24px;
   padding: 4px;
   border-radius: 4px;
   z-index: 2000;

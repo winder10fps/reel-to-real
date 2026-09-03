@@ -3,3 +3,10 @@
   overflow-x: hidden;
 }
 
+/* body::-webkit-scrollbar {
+  width: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+} */
