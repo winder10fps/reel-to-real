@@ -7,6 +7,7 @@ import { NotFoundPage } from "@/pages/not-found";
 import { Layout } from "@/app/layout";
 import { ShopsPage } from "@/pages/shops";
 import { CartPage } from "@/pages/cart";
+import { OrderPage } from "@/pages/order";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: '/cart',
         element: <CartPage />
+      },
+      {
+        path: '/order',
+        element: <OrderPage />
       },
       {
         path: '*',

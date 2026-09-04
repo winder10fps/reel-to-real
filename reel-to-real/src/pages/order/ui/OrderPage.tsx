@@ -1,15 +1,14 @@
+import { validateForm, type FormErrors } from "@/shared/lib"
 import { Button, Checkbox, Input, Link, Textarea } from "@/shared/ui"
 import { useState } from "react"
-import './ContactsPage.css'
-import { CompanyContacts } from "@/entities/company"
-import { validateForm, type FormErrors } from "@/shared/lib"
 
-
-export const ContactsPage = () => {
+export const OrderPage = () => {
   const [firstName, setFirstName] = useState('')
-  const [company, setCompany] = useState('')
+  const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
+  const [address, setAddress] = useState('')
+  const [index, setIndex] = useState('')
   const [message, setMessage] = useState('')
   const [isAccept, setIsAccept] = useState(false)
 
@@ -19,7 +18,7 @@ export const ContactsPage = () => {
     e.preventDefault()
 
     const currentErrors = validateForm({
-      firstName, company, email, phone, message, isAccept
+      firstName, lastName, email, phone, message, index, address, isAccept
     })
 
     if (currentErrors.errorMessage) {
@@ -28,9 +27,11 @@ export const ContactsPage = () => {
     }
 
     setFirstName('')
-    setCompany('')
+    setLastName('')
     setEmail('')
     setPhone('')
+    setIndex('')
+    setAddress('')
     setMessage('')
     setIsAccept(false)
   }
@@ -38,7 +39,7 @@ export const ContactsPage = () => {
   return (
     <div className="contacts-page">
       <div className="contacts-page__left">
-        <h2 className="contacts-page__heading">У вас есть вопросы? Напишите нам!</h2>
+        <h2 className="contacts-page__heading">Контактные данные</h2>
         <form onSubmit={sendForm}>
           {error?.errorMessage &&
             <span className='error-message' >{error.errorMessage}</span>
@@ -54,17 +55,18 @@ export const ContactsPage = () => {
               }}
             />
             <Input
-              placeholder="Компания"
-              value={company}
+              placeholder="Фамилия*"
+              value={lastName}
+              errored={error?.lastName}
               onChange={(e) => {
-                setCompany(e.target.value)
+                setLastName(e.target.value)
                 setError(null)
               }}
             />
           </div>
           <div>
             <Input
-              placeholder="E-mail*"
+              placeholder="E-mail"
               value={email}
               errored={error?.email}
               onChange={(e) => {
@@ -78,6 +80,26 @@ export const ContactsPage = () => {
               errored={error?.phone}
               onChange={(e) => {
                 setPhone(e.target.value)
+                setError(null)
+              }}
+            />
+          </div>
+          <div>
+            <Input
+              placeholder="Адрес*"
+              value={address}
+              errored={error?.address}
+              onChange={(e) => {
+                setAddress(e.target.value)
+                setError(null)
+              }}
+            />
+            <Input
+              placeholder="Индекс*"
+              value={index}
+              errored={error?.index}
+              onChange={(e) => {
+                setIndex(e.target.value)
                 setError(null)
               }}
             />
@@ -102,12 +124,11 @@ export const ContactsPage = () => {
           >
             <Link href="/" color="accent" underline>политикой обработки пресональных данных</Link>
           </Checkbox>
-          <Button type="submit">Отправить</Button>
+          <Button type="submit">Оформить заказ</Button>
         </form>
       </div>
       <div className="contacts-page__right">
-        <h2 className="contacts-page__heading right">Наши контакты</h2>
-        <CompanyContacts />
+        <h2 className="contacts-page__heading right">Ваш заказ</h2>
       </div>
     </div>
   )

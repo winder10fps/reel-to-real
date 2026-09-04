@@ -11,7 +11,7 @@ type Props = {
 export const CheckoutButton = ({ cartAmount, disabled, className }: Props) => {
   const navigate = useNavigate()
   const handleCheckout = () => {
-    navigate('/')
+    navigate('/order')
   }
   return (
     <div className={`checkout-container ${className}`}>

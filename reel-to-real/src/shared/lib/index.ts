@@ -1,3 +1,5 @@
 export { formatWithEnding } from './format/formatWithEnding'
 export { validatePhone } from './validation/validatePhone'
+export { validateForm } from './validation/validateForm'
+export type { FormErrors } from './validation/validateForm'
 export { sleep } from './time/sleep'
