@@ -1,0 +1,45 @@
+.order-page {
+  display: flex;
+  max-height: 682px;
+}
+
+.order-page__left {
+  width: 100%;
+  max-width: 50%;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.order-page__heading {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 120%;
+  margin-top: 64px;
+}
+
+.order-page__right {
+  width: 100%;
+  max-width: 50%;
+  background-color: var(--color-surface-default);
+  padding: 0 4.17%;
+  border-left: var(--border-neutral-muted);
+  overflow-y: auto;
+}
+
+.order-page__right::-webkit-scrollbar {
+  width: 4px;
+}
+
+.order-page__right::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-muted);
+}
+
+.order-page__heading.right {
+  text-align: start;
+}
+
+.order-page__form-wrapper {
+  width: 100%;
+  max-width: 600px;
+}

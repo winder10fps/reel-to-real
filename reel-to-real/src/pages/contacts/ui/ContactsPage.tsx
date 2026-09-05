@@ -1,8 +1,9 @@
-import { Button, Checkbox, Input, Link, Textarea } from "@/shared/ui"
+import { Checkbox, Input, Link, Textarea } from "@/shared/ui"
 import { useState } from "react"
 import './ContactsPage.css'
 import { CompanyContacts } from "@/entities/company"
 import { validateForm, type FormErrors } from "@/shared/lib"
+import { Form } from "@/shared/ui/Form/Form"
 
 
 export const ContactsPage = () => {
@@ -39,10 +40,11 @@ export const ContactsPage = () => {
     <div className="contacts-page">
       <div className="contacts-page__left">
         <h2 className="contacts-page__heading">У вас есть вопросы? Напишите нам!</h2>
-        <form onSubmit={sendForm}>
-          {error?.errorMessage &&
-            <span className='error-message' >{error.errorMessage}</span>
-          }
+        <Form
+          onSubmit={sendForm}
+          buttonText="Отправить"
+          errorMessage={error?.errorMessage}
+        >
           <div>
             <Input
               placeholder="Имя*"
@@ -102,8 +104,7 @@ export const ContactsPage = () => {
           >
             <Link href="/" color="accent" underline>политикой обработки пресональных данных</Link>
           </Checkbox>
-          <Button type="submit">Отправить</Button>
-        </form>
+        </Form>
       </div>
       <div className="contacts-page__right">
         <h2 className="contacts-page__heading right">Наши контакты</h2>

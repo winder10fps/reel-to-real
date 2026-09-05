@@ -1,0 +1,23 @@
+.form .error-message {
+  display: block;
+  color: var(--color-danger);
+  font-size: 12px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  max-width: 600px;
+  margin: 32px auto 64px auto;
+}
+
+.form div {
+  display: flex;
+  gap: 20px;
+}
+
+.form div input {
+  width: 100%;
+}

@@ -1,0 +1,23 @@
+.users-order {
+  margin: 32px 0;
+}
+
+.users-order__money {
+  border: var(--border-neutral-muted);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.users-order__money div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.users-order__money div span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-transform: uppercase;
+}

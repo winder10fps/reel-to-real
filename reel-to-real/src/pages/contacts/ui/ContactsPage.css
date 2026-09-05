@@ -8,36 +8,12 @@
   padding: 0 16px;
 }
 
-.error-message {
-  display: block;
-  color: var(--color-danger);
-  font-size: 12px;
-}
-
 .contacts-page__heading {
   font-weight: 600;
   font-size: 32px;
   line-height: 120%;
   text-align: center;
   margin-top: 64px;
-}
-
-.contacts-page__left form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 20px;
-  max-width: 600px;
-  margin: 32px auto 64px auto;
-}
-
-.contacts-page__left form div {
-  display: flex;
-  gap: 20px;
-}
-
-.contacts-page__left form div input {
-  width: 100%;
 }
 
 .contacts-page__right {
