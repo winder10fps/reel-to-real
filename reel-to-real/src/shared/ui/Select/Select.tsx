@@ -9,7 +9,8 @@ export type Option = {
 
 type Props = {
   title: string,
-  options: Option[]
+  options: Option[],
+  onClick?: () => void,
   iconPath?: string,
   haveBorders?: boolean
 }
@@ -18,7 +19,8 @@ export const Select = ({
   title,
   options,
   iconPath,
-  haveBorders
+  haveBorders,
+  onClick
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -30,6 +32,7 @@ export const Select = ({
       ].filter(Boolean).join(' ')}
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
+      onClick={onClick}
     >
       <div className="select-header">
         {iconPath &&

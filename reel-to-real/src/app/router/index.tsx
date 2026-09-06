@@ -8,6 +8,8 @@ import { Layout } from "@/app/layout";
 import { ShopsPage } from "@/pages/shops";
 import { CartPage } from "@/pages/cart";
 import { OrderPage } from "@/pages/order";
+import { CollectionsLayout } from "@/widgets/collections-layout";
+import { CollectionPage } from "@/pages/collection";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,16 @@ const router = createBrowserRouter([
       {
         path: '/order',
         element: <OrderPage />
+      },
+      {
+        path: '/collections',
+        element: <CollectionsLayout />,
+        children: [
+          {
+            path: ':collectionSlug',
+            element: <CollectionPage />
+          }
+        ]
       },
       {
         path: '*',

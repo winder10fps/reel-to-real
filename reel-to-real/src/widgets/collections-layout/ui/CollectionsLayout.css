@@ -1,0 +1,33 @@
+.collections-container {
+  display: flex;
+  min-height: 700px;
+  background-color: var(--color-surface-default);
+
+}
+
+.collections-sidebar {
+  width: 476px;
+  min-width: 476px;
+  background-color: transparent;
+  background-color: var(--color-surface-subtle);
+  padding: 16px 0;
+  position: sticky;
+}
+
+.collections-sidebar__nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-sidebar__link {
+  line-height: 140%;
+  padding: 8px 24px;
+}
+
+.catalog-sidebar__link--active {
+  background-color: var(--color-surface-default);
+}
+
+.collections-content {
+  padding: 24px;
+}

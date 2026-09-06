@@ -1,0 +1,1 @@
+export { CollectionsLayout } from './ui/CollectionsLayout'

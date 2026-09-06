@@ -20,6 +20,7 @@ const HeaderBottom = () => {
       <Select
         title='каталог'
         iconPath='/icons/burger.svg'
+        onClick={() => navigate('/catalog')}
         options={[
           { title: 'Проигрыватели', href: '/' },
           { title: 'Микрофоны', href: '/' },
@@ -35,6 +36,7 @@ const HeaderBottom = () => {
       />
       <Select
         title='коллекции'
+        onClick={() => navigate('/collections')}
         options={[
           { title: 'Микрофоны для записи вокала', href: '/' },
           { title: 'Для студии', href: '/' },
