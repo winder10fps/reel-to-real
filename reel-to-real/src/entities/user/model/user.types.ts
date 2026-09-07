@@ -2,6 +2,7 @@ import type { CartItem } from "@/entities/cart-item";
 
 export interface IUser {
   id: number,
+  phone: string,
   cart: CartItem[],
   favarite: number[]
 }

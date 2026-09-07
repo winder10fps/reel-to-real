@@ -21,6 +21,7 @@ const StepFormConfirm = ({ phone, onSuccess }: Props) => {
     if (currentCode === '1111') {
       setUser({
         id: 1,
+        phone: phone,
         cart: [
           {
             id: 1,

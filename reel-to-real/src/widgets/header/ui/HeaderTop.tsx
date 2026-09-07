@@ -2,6 +2,7 @@ import './HeaderTop.css'
 
 import { useAuth, useCart } from '@/entities/user'
 import { RegisterModal } from '@/features/auth-by-sms'
+import { ProfileModal } from '@/features/profile-modal'
 import { Logo, Link, IconBadgeButton, Button } from '@/shared/ui'
 import { useState, type ReactNode } from 'react'
 
@@ -15,14 +16,7 @@ const HeaderTop = ({ miniCartSlot, onToggleMiniCart }: Props) => {
   const { cartItemsCount } = useCart()
 
   const [isLoginOpen, setIsLoginOpen] = useState(false)
-
-  const loginButtonClick = () => {
-    setIsLoginOpen(true)
-  }
-
-  const profileButtonCLick = () => {
-    alert('profile clicked')
-  }
+  const [isProfileOpen, setIsProfileOpen] = useState(false)
 
   return (
     <div className='header-top'>
@@ -47,11 +41,16 @@ const HeaderTop = ({ miniCartSlot, onToggleMiniCart }: Props) => {
             >
               <img src="icons/cart.svg" alt="🛒" />
             </IconBadgeButton>
-            <Button forHeader onClick={profileButtonCLick}>
+            <Button forHeader onClick={() => setIsProfileOpen(true)}>
               <img src="/icons/user.svg" alt="👤" />
               кабинет
             </Button>
             {miniCartSlot}
+
+            <ProfileModal
+              isOpen={isProfileOpen}
+              onClose={() => setIsProfileOpen(false)}
+            />
           </>
           :
           <>
@@ -61,7 +60,7 @@ const HeaderTop = ({ miniCartSlot, onToggleMiniCart }: Props) => {
             <Button forHeader>
               <img src="/icons/cart.svg" alt="🛒" />
             </Button>
-            <Button forHeader onClick={loginButtonClick}>войти</Button>
+            <Button forHeader onClick={() => setIsLoginOpen(true)}>войти</Button>
 
             <RegisterModal
               isOpen={isLoginOpen}

@@ -1,12 +1,7 @@
 :root {
   font-family: "Inter", sans-serif;
+  color: var(--color-primary);
   overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-secondary) var(--color-primary);
 }
-
-/* body::-webkit-scrollbar {
-  width: 2px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: var(--color-accent);
-} */
