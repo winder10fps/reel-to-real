@@ -1,6 +1,7 @@
 import { Button, Input } from '@/shared/ui'
 import './Subscribe.css'
 import { useState } from 'react'
+import { BASE_URL } from '@/shared/config'
 
 const Subscribe = () => {
   const [email, setEmail] = useState('')
@@ -24,12 +25,24 @@ const Subscribe = () => {
     }
 
     setStatus('loading')
+
     try {
-      // имитация запроса
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      const response = await fetch(`${BASE_URL}/subscribe`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: email })
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || "Ошибка подписки")
+      }
+
+      // const data = await response.json()
       setStatus('success')
-      setText('Спасибо за подписку! Мы будем присылать вам обзоры аппаратуры, промокоды и интересные новости на почту ' + email)
-      setEmail('')
+      setText('Мы будем присылать вам обзоры аппаратуры, промокоды и интересные новости на почту ' + email)
     }
     catch {
       setStatus('error')
